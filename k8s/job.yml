@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-hello-cloud
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello-cloud
+          image: matiasfranci/hello-cloud:latest
+          command: ["python"]
+          args: ["helloworld.py"]
+      restartPolicy: Never
