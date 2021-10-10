@@ -9,5 +9,5 @@ spec:
         - name: hello-cloud
           image: matiasfranci/hello-cloud:latest
           command: ["python"]
-          args: ["helloworld.py"]
+          args: ["main.py"]
       restartPolicy: Never

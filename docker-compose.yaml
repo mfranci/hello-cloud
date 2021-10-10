@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  python:
+    build: ./
+    command: python main.py
+    container_name: job-hello-cloud
+    image: python:3.9-slim
+    volumes:
+      #- ./src:/usr/src
+      - ./files:/app/file
+    environment:
+      - ENV_RUTA=/app/file
+
+#  service2:
+#    build: .
+#    image: matiasfranci/hello-cloud:latest
+#    command: docker push matiasfranci/hello-cloud:latest
