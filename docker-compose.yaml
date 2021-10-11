@@ -7,7 +7,6 @@ services:
     container_name: job-hello-cloud
     image: python:3.9-slim
     volumes:
-      #- ./src:/usr/src
       - ./files:/app/file
     environment:
       - ENV_RUTA=/app/file

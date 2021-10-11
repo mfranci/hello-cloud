@@ -11,5 +11,6 @@ RUN mkdir -p /app/files
 COPY ./src/ /app/
 COPY ./files/ /app/file/
 #VOLUME ./files/ /app/file
+ENV ENV_RUTA=/app/file
 
-#ENTRYPOINT [ "python", "main.py" ]
+ENTRYPOINT [ "python", "main.py" ]
