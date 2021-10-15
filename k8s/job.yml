@@ -8,6 +8,17 @@ spec:
       containers:
         - name: hello-cloud
           image: matiasfranci/hello-cloud:latest
+          env:
+            - name: ENV_RUTA
+              value: "/app/file"
+
           command: ["python"]
           args: ["main.py"]
+          volumeMounts:
+            - mountPath: /app/files
+              name: files-vlm
+      volumes:
+        - name: files-vlm
+          hostPath:
+            path: /mnt/d/Matt/Lab/python/hello-cloud/files
       restartPolicy: Never

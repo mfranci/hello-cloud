@@ -51,7 +51,10 @@ def app():
     ruta = os.environ.get('ENV_RUTA')
 
     if not ruta:
+        print("[!] No existe ENV_RUTA, se utiliza path por defecto")
         ruta = "../files"
+    else:
+        print("[*] Existe ENV_RUTA")
 
     print(f'RUTA: {ruta}')
 
